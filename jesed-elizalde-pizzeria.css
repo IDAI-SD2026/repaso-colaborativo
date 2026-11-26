@@ -1,0 +1,157 @@
+
+/* =================================================================
+   SPRINT 2 (Lunes y Miércoles): CSS3, FLEXBOX Y RESPONSIVE
+   1. Personaliza los colores de tu equipo en :root.
+   2. Usa Flexbox para alinear elementos.
+   3. Ajusta el diseño móvil en la @media query al final.
+================================================================== */
+
+:root {
+  --color-fondo: #f8fafc;
+  --color-tarjeta: #ffffff;
+  --color-primario: #d89a1d;
+  --color-primario-hover: #ebe825;
+  --color-texto: #0f172a;
+  --color-borde: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+.barra-volver {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+
+.barra-volver a {
+  color: var(--color-primario);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contenedor {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--color-tarjeta);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-borde);
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.contenedor > p {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+/* Flexbox aplicado al formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.grupo-campos {
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 0.5rem;
+  color: var(--color-primario);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 0.6rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.opcion-linea {
+  display: flex;
+  align-items: center
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-principal {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-principal:hover {
+  background-color: var(--color-primario-hover);
+}
+
+.resultado {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  font-weight: 600;
+}
+
+
+img.banner {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* =================================================================
+   DISEÑO RESPONSIVE (Móviles menores a 600px)
+================================================================== */
+@media (max-width: 600px) {
+  body {
+    padding: 0.75rem;
+}
+
+  .contenedor {
+    padding: 1.25rem;
+  }
+
+  .btn-principal {
+    width: 100%;
+  }
+
+  img.banner {
+    display: none;
+  }
+}

@@ -28,7 +28,7 @@ Cada alumno desarrollará un módulo cotizador independiente y lo integrará al 
   3. Agrega el enlace a tu página dentro de la lista `<ul>` en `index.html`.
   4. Sube tu rama y abre un **Pull Request** hacia `main` al finalizar el Viernes.
 
-### 🔹 Sprint 2: Diseño Responsive con Flexbox y Color (Lunes y Mártes)
+### 🔹 Sprint 2: Diseño Responsive con Flexbox y Color (Lunes y Martes)
 * *(Nota: El miércoles no hay actividad de repaso por exposiciones).*
 * **Rama:** `css/nombrealumno1` (ej. `css/fernando`)
 * **Tarea:**
@@ -36,7 +36,7 @@ Cada alumno desarrollará un módulo cotizador independiente y lo integrará al 
   2. Cambia la paleta de colores en `:root` acorde a la identidad visual de tu tema.
   3. Usa **Flexbox** (`display: flex`, `justify-content`, `align-items`, `gap`) para organizar los campos y opciones.
   4. Asegura que el diseño sea **100% responsive** en pantallas menores a `600px` usando `@media`.
-  5. Abre tu **Pull Request** al finalizar el Miércoles.
+  5. Abre tu **Pull Request** al finalizar el Martes.
 
 ### 🔹 Sprint 3: Lógica de Precios con JavaScript (Jueves y Viernes)
 * **Rama:** `js/nombrealumno1` (ej. `js/fernando`)

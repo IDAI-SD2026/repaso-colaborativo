@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cotizador - [Nombre de tu Tema]</title>
+  <title>Cotizador - Café especialidad</title>
   
   <!-- SPRINT 2 (Lunes): Cambia "plantilla.css" por el nombre de tu archivo CSS (ej. equipo1.css) -->
-  <link rel="stylesheet" href="plantilla.css">
+  <link rel="stylesheet" href="Dustin-Cafeteria.css">
 </head>
 <body>
+  <div class="columna-imagen">
+  <img src="IMG-CAFETERIA/pexels-shotbyrain-4912405.jpg">
+  </div>
 
-  <nav class="barra-volver">
+
+  <main class="contenedor">
+
+    <nav class="barra-volver">
     <a href="index.html">← Volver al menú principal</a>
   </nav>
 
-  <main class="contenedor">
-    <h1>Cotizador de [Tu Producto/Servicio]</h1>
+    <h1>Cotizador de Café </h1>
     <p>Completa los datos para calcular el precio total.</p>
 
     <!-- =================================================================
@@ -27,89 +32,99 @@
     ================================================================== -->
     <form id="formularioCotizador">
 
-      <!-- SECCIÓN 1: Datos básicos y cantidad -->
-      <fieldset class="grupo-campos">
-        <legend>1. Información de tu PC</legend>
+    <fieldset class="grupo-campos">
+        <legend>1. Información del Pedido</legend>
 
         <div class="campo">
           <label for="nombreCliente">Nombre del cliente:</label>
-          <input type="text" id="nombreCliente" placeholder="Ej. Luis Hernandez" required>
+          <input type="text" id="nombreCliente" placeholder="Ej. Ana López" required>
         </div>
 
         <div class="campo">
           <label for="cantidad">Cantidad:</label>
-          <input type="number" id="cantidad" value="1" min="1" max="50" required>
+          <input type="number" id="cantidad" value="1" min="1" max="6" required>
         </div>
+      </fieldset>
+
+      <!-- SECCIÓN 1: Datos básicos y cantidad -->
+      <fieldset class="grupo-campos">
+        <legend>2. Tipo de grano</legend>
+                
+        <label class="opcion-linea">
+          <input type="radio" name="planBase" id="planBasico" value="100" checked>
+          Arábica
+        </label>
+                        
+        <label class="opcion-linea">
+          <input type="radio" name="planBase" id="planBasico" value="100" checked>
+          Robusta 
+        </label>
+                                
+        <label class="opcion-linea">
+          <input type="radio" name="planBase" id="planBasico" value="100" checked>
+          Mezcla de la casa 
+        </label>
       </fieldset>
 
       <!-- SECCIÓN 2: Opciones excluyentes (Radio) -->
       <fieldset class="grupo-campos">
-        <legend>2. Elige una gama para tu PC</legend>
+        <legend>3. Elige tu café</legend>
         
         <label class="opcion-linea">
-          <input type="radio" name="planBase" id="planBasico" value="12,000" checked>
-          Gama baja ($12,000)
+          <input type="radio" name="planBase" id="planBasico" value="100" checked>
+          Chiapas, Altura ($380/Kg)
         </label>
 
         <label class="opcion-linea">
-          <input type="radio" name="planBase" id="planPremium" value="20,000">
-          Gama media ($20,000)
-        </label>
-
-        <label class="opcion-linea">
-          <input type="radio" name="planBase" id="planPro" value="35,000">
-          Gama alta ($35,000)
+          <input type="radio" name="planBase" id="planPremium" value="200">
+          Veracruz, Coatepec ($410/Kg)
         </label>
         
         <label class="opcion-linea">
-          <input type="radio" name="planBase" id="planUltra" value="65,000">
-          Gama ultra ($65,000)
+          <input type="radio" name="planBase" id="planPremium" value="200">
+          Oaxaca, Pluma ($450/Kg)
         </label>
-
       </fieldset>
 
       <!-- SECCIÓN 3: Extras opcionales (Checkbox) -->
       <fieldset class="grupo-campos">
-        <legend>3. Agrega periféricos</legend>
+        <legend>4. Presentación y cantidad</legend>
 
         <label class="opcion-linea">
-          <input type="checkbox" id="monitor144" value="7700">
-          Monitor 144hz 1440p (+$7,700)
+          <input type="checkbox" id="extra1" value="30">
+          Bolsa 250 g
         </label>
 
         <label class="opcion-linea">
-          <input type="checkbox" id="tecladomec" value="2500">
-          Teclado mecánico (+$2500)
+          <input type="checkbox" id="extra2" value="50">
+          Bolsa 500 g
         </label>
-      </fieldset>
-
-      <fieldset class="grupo-campos">
-        <legend>4. Agrega software</legend>
-
+        
         <label class="opcion-linea">
-          <input type="checkbox" id="win11" value="5000">
-          Licencia de Windows 11 (+$5,000)
-        </label>
-
-        <label class="opcion-linea">
-          <input type="checkbox" id="office" value="3000">
-          Licencia de Office (+$3,000)
+          <input type="checkbox" id="extra2" value="50">
+          Bolsa 1 Kg
         </label>
       </fieldset>
 
-      <fieldset class="grupo-campos">
-        <legend>5. Agregar componentes</legend>
+         <fieldset class="grupo-campos">
+        <legend>5. Nivel de tueste</legend>
 
         <label class="opcion-linea">
-          <input type="checkbox" id="+RAM" value="1900">
-          + 8GB RAM (+$1,900)
+          <input type="checkbox" id="extra1" value="30">
+          Claro
         </label>
 
         <label class="opcion-linea">
-          <input type="checkbox" id="refliquida" value="5900">
-          Refrigeración liquida (+$5,900)
+          <input type="checkbox" id="extra2" value="50">
+          Medio
+        </label>
+        
+        <label class="opcion-linea">
+          <input type="checkbox" id="extra2" value="50">
+          Oscuro
         </label>
       </fieldset>
+
       <!-- SECCIÓN 4: Lista desplegable (Select) -->
       <fieldset class="grupo-campos">
         <legend>6. Método de entrega</legend>
@@ -118,7 +133,7 @@
           <label for="tipoEntrega">Selecciona entrega:</label>
           <select id="tipoEntrega">
             <option value="tienda">Recoger en tienda (Gratis)</option>
-            <option value="domicilio">Envío a domicilio (+$250)</option>
+            <option value="domicilio">Envío a domicilio (+$40)</option>
           </select>
         </div>
       </fieldset>
