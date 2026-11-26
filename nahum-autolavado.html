@@ -1,75 +1,176 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cotizador de Autolavado Detailing</title>
+  <meta name="description" content="Servicio de lavado y detailing automotriz.">
+  <title>Blackline Detailing | Autolavado</title>
   <link rel="stylesheet" href="nahum-autolavado.css">
 </head>
 <body>
-  <nav class="barra-volver">
-    <a href="index.html">&larr; Volver al menú principal</a>
-  </nav>
 
-  <main class="contenedor">
-    <h1>Cotizador de Autolavado Detailing</h1>
-    <p>Completa los datos para cotizar los servicios para tu vehículo.</p>
+  <header class="cabecera">
+    <a class="marca" href="#inicio">BLACKLINE <span>DETAILING PARA SUPER DEPORTIVOS</span></a>
 
-    <form id="formularioCotizador">
-      <fieldset class="grupo-campos">
-        <legend>1. Información del pedido</legend>
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#cotizador">Cotizar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-contenido">
+        <p class="etiqueta">CUIDADO AUTOMOTRIZ</p>
+        <h1>DETALLING<br><span>DE OTRO NIVEL</span></h1>
+        <p class="hero-texto">
+          Limpieza, cuidado y acabado para que tu vehículo luzca como merece.
+        </p>
+        <a class="boton" href="#servicios">Conoce los servicios</a>
+      </div>
+    </section>
+
+    <section class="seccion servicios" id="servicios">
+      <div class="encabezado-seccion">
+        <p class="etiqueta">LO QUE HACEMOS</p>
+        <h2>NUESTROS SERVICIOS</h2>
+        <p>Elige el nivel de limpieza que necesita tu vehículo.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="numero">01</span>
+          <h3>Lavado básico</h3>
+          <p>Lavado exterior, limpieza de rines y secado de carrocería.</p>
+          <p class="precio">$140 <small>MXN</small></p>
+        </article>
+
+        <article class="tarjeta destacada">
+          <span class="numero">02</span>
+          <h3>Lavado completo</h3>
+          <p>Limpieza exterior e interior para una presentación más detallada.</p>
+          <p class="precio">$320 <small>MXN</small></p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">03</span>
+          <h3>Servicios adicionales</h3>
+          <p>Agrega limpieza de interiores o tratamiento especial a tu servicio.</p>
+          <p class="precio">Desde $60 <small>MXN</small></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion proceso" id="proceso">
+      <div class="encabezado-seccion">
+        <p class="etiqueta">SENCILLO Y DIRECTO</p>
+        <h2>¿CÓMO FUNCIONA?</h2>
+      </div>
+
+      <div class="pasos">
+        <article class="paso">
+          <span>01</span>
+          <h3>Elige</h3>
+          <p>Selecciona el servicio que buscas.</p>
+        </article>
+
+        <article class="paso">
+          <span>02</span>
+          <h3>Personaliza</h3>
+          <p>Agrega los extras que necesites.</p>
+        </article>
+
+        <article class="paso">
+          <span>03</span>
+          <h3>Cotiza</h3>
+          <p>Consulta el costo estimado de tu servicio.</p>
+        </article>
+
+        <article class="paso">
+          <span>04</span>
+          <h3>Disfruta</h3>
+          <p>Recibe tu vehículo limpio y listo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion cotizador" id="cotizador">
+      <div class="encabezado-seccion">
+        <p class="etiqueta">CALCULA TU SERVICIO</p>
+        <h2>COTIZADOR</h2>
+        <p>Completa los datos para preparar tu cotización.</p>
+      </div>
+
+      <form class="formulario" id="formularioCotizacion">
 
         <div class="campo">
-          <label for="nombreCliente">Nombre del cliente:</label>
-          <input type="text" id="nombreCliente" name="nombreCliente" placeholder="Ej. Ana López" required>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre"
+            placeholder="Tu nombre" required>
         </div>
 
         <div class="campo">
-          <label for="cantidad">Cantidad de vehículos:</label>
-          <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="50" required>
+          <label for="vehiculos">Cantidad de vehículos</label>
+          <input type="number" id="vehiculos" name="vehiculos"
+            min="1" max="50" value="1" required>
         </div>
-      </fieldset>
 
-      <fieldset class="grupo-campos">
-        <legend>2. Elige el servicio principal</legend>
+        <fieldset class="grupo-campos">
+          <legend>Tipo de servicio</legend>
 
-        <label class="opcion-linea" for="lavadoExpress">
-          <input type="radio" name="servicioBase" id="lavadoExpress" value="140" checked>
-          Lavado Express ($140)
-        </label>
+          <label class="opcion">
+            <input type="radio" name="servicio" value="140" checked>
+            Lavado básico — $140
+          </label>
 
-        <label class="opcion-linea" for="enceradoCompleto">
-          <input type="radio" name="servicioBase" id="enceradoCompleto" value="320">
-          Encerado Completo ($320)
-        </label>
-      </fieldset>
+          <label class="opcion">
+            <input type="radio" name="servicio" value="320">
+            Lavado completo — $320
+          </label>
+        </fieldset>
 
-      <fieldset class="grupo-campos">
-        <legend>3. Agrega servicios opcionales</legend>
+        <fieldset class="grupo-campos">
+          <legend>Servicios adicionales</legend>
 
-        <label class="opcion-linea" for="aspiradoProfundo">
-          <input type="checkbox" id="aspiradoProfundo" name="extras" value="60">
-          Aspirado profundo (+$60)
-        </label>
+          <label class="opcion">
+            <input type="checkbox" name="extra" value="60">
+            Limpieza de interiores — $60
+          </label>
 
-        <label class="opcion-linea" for="lavadoMotor">
-          <input type="checkbox" id="lavadoMotor" name="extras" value="150">
-          Lavado de motor (+$150)
-        </label>
-      </fieldset>
-
-      <fieldset class="grupo-campos">
-        <legend>4. Elige el turno</legend>
+          <label class="opcion">
+            <input type="checkbox" name="extra" value="150">
+            Tratamiento especial — $150
+          </label>
+        </fieldset>
 
         <div class="campo">
-          <label for="tipoTurno">Tipo de turno:</label>
-          <select id="tipoTurno" name="tipoTurno">
-            <option value="0">Turno normal (Gratis)</option>
-            <option value="50">Servicio Express sin fila (+$50)</option>
+          <label for="horario">Horario preferido</label>
+          <select id="horario" name="horario">
+            <option value="0">Horario regular</option>
+            <option value="50">Horario especial (+$50)</option>
           </select>
         </div>
-      </fieldset>
-    </form>
+
+        <button class="boton" type="submit">
+          Preparar cotización
+        </button>
+
+        <p class="nota-formulario">
+          La cotización es un estimado y puede variar según el estado del vehículo.
+        </p>
+
+        <div id="resultadoCotizacion" class="resultado" aria-live="polite"></div>
+      </form>
+    </section>
   </main>
+
+  <footer class="pie">
+    <a class="marca" href="#inicio">BLACKLINE <span>DETAILING</span></a>
+    <p>© 2026 Blackline Detailing. Proyecto académico.</p>
+  </footer>
+
 </body>
 </html>
