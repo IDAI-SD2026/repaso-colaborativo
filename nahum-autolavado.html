@@ -127,7 +127,7 @@
           </label>
 
           <label class="opcion">
-            <input type="radio" name="servicio" value="320">
+            <input type="radio" name="servicio" value="320" id="servicioCompleto">
             Lavado completo — $320
           </label>
         </fieldset>
@@ -136,12 +136,12 @@
           <legend>Servicios adicionales</legend>
 
           <label class="opcion">
-            <input type="checkbox" name="extra" value="60">
+            <input type="checkbox" name="extra" value="60" id="extraInteriores">
             Limpieza de interiores — $60
           </label>
 
           <label class="opcion">
-            <input type="checkbox" name="extra" value="150">
+            <input type="checkbox" name="extra" value="150" id="extraTratamiento">
             Tratamiento especial — $150
           </label>
         </fieldset>
@@ -154,7 +154,7 @@
           </select>
         </div>
 
-        <button class="boton" type="submit">
+        <button class="boton" type="button" id="btnCalcular">
           Preparar cotización
         </button>
 
@@ -171,6 +171,6 @@
     <a class="marca" href="#inicio">BLACKLINE <span>DETAILING</span></a>
     <p>© 2026 Blackline Detailing. Proyecto académico.</p>
   </footer>
-
+<script src="nahum-autolavado.js"></script>
 </body>
 </html>
