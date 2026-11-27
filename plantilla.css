@@ -142,4 +142,8 @@ select {
   .btn-principal {
     width: 100%;
   }
+
+  img {
+    display: none;
+  }
 }
