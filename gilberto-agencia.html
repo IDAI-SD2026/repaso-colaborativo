@@ -1,89 +1,150 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia de Viajes</title>  <link rel="stylesheet" href="gilberto-agencia.css">
+    <title>Cotizador - Agencia de Viajes</title>
+    <link rel="stylesheet" href="gilberto-agencia.css">
 </head>
+
 <body>
 
-    <h1>Agencia de Viajes</h1>
-    <p>Llena el siguiente formulario para elegir tu próximo viaje.</p>
+    <header>
+        <h1>Agencia de Viajes</h1>
+        <p>¡Planea tu próxima aventura con nosotros!</p>
+    </header>
 
-    <ul>
-    <li>
-        <a href="gilberto-agencia.html">Agencia de Viajes</a>
-    </li>
-</ul>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#cotizador">Cotizador</a>
+        <a href="#resultado">Resultado</a>
+    </nav>
 
-    <form>
+    <main id="inicio">
 
-        <fieldset>
-            <legend>Datos del viajero</legend>
+        <h2>Cotizador de paquetes turísticos</h2>
 
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <p>Completa tus datos y selecciona el paquete que deseas contratar.</p>
 
-            <br>
+        <form id="cotizador">
 
-            <label for="edad">Edad:</label>
-            <input type="number" id="edad" name="edad" min="1" required>
+            <fieldset>
+                <legend>Datos del cliente</legend>
 
-        </fieldset>
+                <label for="nombreCliente">Nombre completo:</label>
+                <input type="text" id="nombreCliente" name="nombreCliente"
+                    placeholder="Escribe tu nombre">
 
-        <br>
+                <br><br>
 
-        <fieldset>
-            <legend>Selecciona tu paquete</legend>
+                <label for="cantidad">Cantidad de viajeros:</label>
+                <input type="number" id="cantidad" name="cantidad"
+                    min="1" max="20" step="1" placeholder="Máximo 20">
 
-            <input type="radio" id="mochilero" name="paquete" value="3500" required>
-            <label for="mochilero">Mochilero - $3,500</label>
-
-            <br>
-
-            <input type="radio" id="incluido" name="paquete" value="7800">
-            <label for="incluido">Todo Incluido - $7,800</label>
-
-        </fieldset>
-
-        <br>
-
-        <fieldset>
-            <legend>Servicios adicionales</legend>
-
-            <input type="checkbox" id="seguro" name="servicios" value="450">
-            <label for="seguro">Seguro de viajero (+$450)</label>
+            </fieldset>
 
             <br>
 
-            <input type="checkbox" id="tour" name="servicios" value="800">
-            <label for="tour">Tour guiado (+$800)</label>
+            <fieldset>
+                <legend>Selecciona tu paquete</legend>
 
-        </fieldset>
+                <input type="radio" id="paqueteMochilero"
+                    name="paquete" value="3500">
+
+                <label for="paqueteMochilero">
+                    Mochilero - $3,500
+                </label>
+
+                <br><br>
+
+                <input type="radio" id="paqueteTodoIncluido"
+                    name="paquete" value="7800">
+
+                <label for="paqueteTodoIncluido">
+                    Todo Incluido - $7,800
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Servicios adicionales</legend>
+
+                <input type="checkbox" id="seguro" name="seguro">
+
+                <label for="seguro">
+                    Seguro de viajero (+$450 por persona)
+                </label>
+
+                <br><br>
+
+                <input type="checkbox" id="tour" name="tour">
+
+                <label for="tour">
+                    Tour guiado (+$800 por persona)
+                </label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Temporada del viaje</legend>
+
+                <label for="tipoTemporada">
+                    Selecciona la temporada:
+                </label>
+
+                <select id="tipoTemporada" name="tipoTemporada">
+
+                    <option value="">Selecciona una opción</option>
+
+                    <option value="baja">
+                        Temporada Baja (Gratis)
+                    </option>
+
+                    <option value="alta">
+                        Temporada Alta (+$1,200 por persona)
+                    </option>
+
+                </select>
+
+            </fieldset>
+
+            <br>
+
+            <button type="button" id="btnCalcular">
+                Calcular cotización
+            </button>
+
+            <button type="reset">
+                Limpiar formulario
+            </button>
+
+        </form>
 
         <br>
 
-        <fieldset>
-            <legend>Temporada del viaje</legend>
+        <section id="resultado">
+            <h2>Resultado de tu cotización</h2>
 
-            <label for="temporada">Selecciona la temporada:</label>
+            <div id="cajaResultado">
+                Aquí aparecerá el total de tu viaje.
+            </div>
+        </section>
 
-            <select id="temporada" name="temporada" required>
-                <option value="">Selecciona una opción</option>
-                <option value="0">Temporada Baja (Gratis)</option>
-                <option value="1200">Temporada Alta (+$1,200)</option>
-            </select>
+    </main>
 
-        </fieldset>
+    <footer>
+        <p>Agencia de Viajes | Cotizador de paquetes turísticos</p>
+    </footer>
 
-        <br>
-
-        <button type="submit">Enviar reservación</button>
-        <button type="reset">Cancelar</button>
-
-    </form>
-
+    <!-- CONEXIÓN CON JAVASCRIPT -->
+    <script src="gilberto-agencia.js"></script>
 
 </body>
 </html>
+
